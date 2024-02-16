@@ -19,8 +19,10 @@ height = st.number_input("Enter your height in Meters", step = 0.01)
 def calculate_bmi():
     bmi = weight/(height)**2
     bmi_thresholds = [18.5, 23, 27.5]
-    level_labels = ['Risk of nutritional deficiency','Low Risk','Moderate Risk','High Risk']
-    if bmi <= bmi_thresholds[0]:
+    level_labels = ['Risk of nutritional deficiency','Low Risk','Moderate Risk','High Risk','Invalid']
+    if bmi < bmi_thresholds[0]:
+        level = level_labels[4]
+    elif bmi <= bmi_thresholds[0]:
         level = level_labels[0]
     elif bmi <= bmi_thresholds[1]:
         level = level_labels[1]
