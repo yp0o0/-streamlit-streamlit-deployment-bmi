@@ -25,7 +25,7 @@ def calculate_bmi():
     elif bmi <= bmi_thresholds[0]:
         level = level_labels[0]
     st.error(f'Your BMI is {bmi}. It is {level}')
-    elif bmi <= bmi_thresholds[1]:
+    if bmi <= bmi_thresholds[1]:
         level = level_labels[1]
     elif bmi <= bmi_thresholds[2]:
         level = level_labels[2]
