@@ -22,7 +22,7 @@ def calculate_bmi():
     level_labels = ['Risk of nutritional deficiency','Low Risk','Moderate Risk','High Risk','Invalid']
     if bmi < bmi_thresholds[0]:
         level = level_labels[4]
-        st.error(f'Your BMI is {bmi}. It is {level}')
+    st.error(f'Your BMI is {bmi}. It is {level}')
     elif bmi <= bmi_thresholds[0]:
         level = level_labels[0]
     elif bmi <= bmi_thresholds[1]:
